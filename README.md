@@ -2,10 +2,9 @@
 
 ![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)
 
-A starter Flutter tool for macOS that uses [`macos_ui`](https://pub.dev/packages/macos_ui).
+A **mason brick** to create a starter Flutter tool for macOS that uses [`macos_ui`](https://pub.dev/packages/macos_ui).
 
-<img src="https://github.com/schilken/macosui_tool_starter/tree/main/assets_for_readme/macosui_tool_starter-screenshot.png"/>
-
+<img src="https://github.com/schilken/macosui_tool_starter/blob/main/assets_for_readme/macosui_tool_starter-screenshot.png"/>
 
 ## What's Included ✨
 
