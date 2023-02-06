@@ -3,7 +3,7 @@ description: A starter Flutter application for a macOS tool that uses macos_ui
 version: 0.0.1
 environment:
   mason: ">=0.1.0-dev <0.1.0"
-#repository: "https://github.com/GroovinChip/macosui_starter"
+repository: "https://github.com/schilken/macosui_tool_starter"
 vars:
   project_name:
     type: string
