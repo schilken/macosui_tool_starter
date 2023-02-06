@@ -4,7 +4,7 @@
 
 A **mason brick** to create a starter Flutter tool for macOS that uses [`macos_ui`](https://pub.dev/packages/macos_ui).
 
-<img src="https://github.com/schilken/macosui_tool_starter/blob/main/assets_for_readme/macosui_tool_starter-screenshot.png"/>
+<img src="https://raw.githubusercontent.com/schilken/macosui_tool_starter/main/assets_for_readme/macosui_tool_starter-screenshot.png"/>
 
 ## What's Included ✨
 
