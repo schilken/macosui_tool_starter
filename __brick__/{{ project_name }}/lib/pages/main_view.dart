@@ -1,25 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:macos_ui/macos_ui.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:macos_ui/macos_ui.dart';
 
 import '../providers/app_notifier.dart';
 import 'home_page.dart';
 import 'settings_page.dart';
 
-class MainView extends StatefulWidget {
+class MainView extends ConsumerStatefulWidget {
   const MainView({super.key});
 
   @override
-  State<MainView> createState() => _MainViewState();
+  ConsumerState<MainView> createState() => _MainViewState();
 }
 
-class _MainViewState extends State<MainView> {
+class _MainViewState extends ConsumerState<MainView> {
   int _pageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-//    final appState = ref.watch(appNotifier);
+    final appState = ref.watch(appNotifier);
     return MacosWindow(
       sidebar: Sidebar(
         decoration: BoxDecoration(
@@ -28,8 +28,8 @@ class _MainViewState extends State<MainView> {
         minWidth: 200,
         bottom: MacosListTile(
           leading: const MacosIcon(CupertinoIcons.app_badge),
-          title: const Text('{{ app_display_name }}'),
-          subtitle: Text('appState.appVersion'),
+          title: const Text('Flutter Cleaner'),
+          subtitle: Text('Version ${appState.appVersion}'),
         ),
         builder: (context, scrollController) => SidebarItems(
           currentIndex: _pageIndex,
@@ -39,7 +39,7 @@ class _MainViewState extends State<MainView> {
           items: const [
             SidebarItem(
               leading: MacosIcon(CupertinoIcons.home),
-              label: Text('Home'),
+              label: Text('Result Page'),
             ),
             SidebarItem(
               leading: MacosIcon(CupertinoIcons.gear),
@@ -55,7 +55,6 @@ class _MainViewState extends State<MainView> {
           SettingsPage(),
         ],
       ),
-      
     );
   }
 }

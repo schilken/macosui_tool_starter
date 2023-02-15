@@ -25,7 +25,7 @@ class HomePage extends ConsumerWidget {
                 MacosWindowScope.of(context).toggleSidebar();
               },
             ),
-            title: Text('Home Version ${appState.appVersion}'),
+            title: Text('Home Page'),
             titleWidth: 250,
             actions: [
               ToolBarPullDownButton(
@@ -58,7 +58,7 @@ class HomePage extends ConsumerWidget {
           ),
           children: [
             ContentArea(
-              builder: (context) {
+              builder: (context, _) {
                 return Center(
                   child: Text('Home ${appState.currentDirectory}'),
                 );

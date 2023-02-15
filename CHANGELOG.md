@@ -1,3 +1,5 @@
+# 0.2.0
+* Update to macos_ui 1.10.0
 
 # 0.0.2
 * use raw.githubusercontent.com for screenshot
