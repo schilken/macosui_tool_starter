@@ -21,3 +21,22 @@ It provides a Flutter application that:
  * `Scan Directory`which calls a method on `AppNotifier`
 * Reads the current version from the pubspec.yaml and provides it in the `AppState`
 
+## Don't forget to extend the entitlements on macOS
+Often the tools require access to the file system or provide an HTTP server. 
+So in such a case, update the plist dictionary in the files DebugProfile.entitlements and Release.entitlements in the macos/Runner directory.
+For example: 
+```
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<false/>
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+	<key>com.apple.security.files.downloads.read-write</key>
+	<true/>
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	<key>com.apple.security.network.server</key>
+	<true/>
+</dict>
+```
+

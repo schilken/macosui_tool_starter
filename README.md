@@ -47,6 +47,25 @@ Out of the box, this brick creates a Flutter application that:
     └── widget_test.dart
 ```
 
+## Don't forget to extend the entitlements on macOS
+Often the tools require access to the file system or provide an HTTP server. 
+So in such a case, update the plist dictionary in the files DebugProfile.entitlements and Release.entitlements in the macos/Runner directory.
+For example: 
+```
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<false/>
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+	<key>com.apple.security.files.downloads.read-write</key>
+	<true/>
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	<key>com.apple.security.network.server</key>
+	<true/>
+</dict>
+```
+
 ## Credits 
 If you don't need or want Riverpod, preferences and file_picker, you can also use the brick `macosui_starter`, 
 which was the starting point for this brick. 

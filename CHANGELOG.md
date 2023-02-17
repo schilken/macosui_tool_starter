@@ -1,3 +1,5 @@
+# 0.2.1
+* Add section "Don't forget to extend the entitlements on macOS" to the readme
 # 0.2.0
 * Update to macos_ui 1.10.0
 
